@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@Table(name = "technical_support")
 public class TechnicalSupportModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
@@ -12,7 +13,7 @@ public class TechnicalSupportModel implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @Column(nullable = false)
-    private String nome;
+    private String name;
 
     @ManyToMany(targetEntity = EquipmentModel.class, mappedBy = "technicalSupports")
     private List<EquipmentModel> equipment;
@@ -20,8 +21,8 @@ public class TechnicalSupportModel implements Serializable {
     public TechnicalSupportModel() {
     }
 
-    public TechnicalSupportModel(String nome) {
-        this.nome = nome;
+    public TechnicalSupportModel(String name) {
+        this.name = name;
     }
 
     public Long getId() {
@@ -32,12 +33,12 @@ public class TechnicalSupportModel implements Serializable {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public List<EquipmentModel> getEquipment() {

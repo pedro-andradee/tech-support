@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Entity
+@Table(name = "equipment")
 public class EquipmentModel implements Serializable {
     private static final long serialVersionUID = 1L;
 

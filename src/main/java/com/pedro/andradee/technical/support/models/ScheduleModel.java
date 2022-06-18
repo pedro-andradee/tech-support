@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
+@Table(name = "schedule")
 public class ScheduleModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
